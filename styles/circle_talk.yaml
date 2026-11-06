@@ -1,0 +1,21 @@
+# Telegram-кружок как основной кадр: голова по центру, b-roll размыт фоном.
+# Источник должен быть крупным планом — иначе circle.py откажется (мыло).
+title: "Кружок-кружок (Telegram-стиль)"
+
+look: {profile: punchy}
+pacing: {shot_min_sec: 2.0, shot_target_sec: 3.2, shot_max_sec: 5.0, opening_shot_sec: 2.0}
+transition: {kind: cut}
+
+circle:
+  mode: main
+  diameter: 0.82
+  center: [0.5, 0.42]
+  zoom: 2.6               # плотнее на голову: в большом круге она должна занимать круг
+  background: blur
+  background_blur: 28
+  max_upscale: 3.5        # 720p + большой круг = мягко; предупредит, но соберёт
+  ring: {width_px: 10, color: "#FFFFFF", opacity: 1.0}
+  shadow: {blur_px: 40, opacity: 0.5, dy_px: 14}
+  when: always
+
+captions: {style: white_soft_shadow, margin_v: 1430, size: 56, max_words_per_chunk: 3}

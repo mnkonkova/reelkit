@@ -1,0 +1,14 @@
+# Defaults every style inherits. A style file overrides only what it changes.
+# Not a style itself — `reelkit styles` never lists it.
+canvas: {width: 1080, height: 1920, fps: 30}
+look: {profile: punchy}
+pacing:
+  shot_min_sec: 1.4
+  shot_target_sec: 2.6
+  shot_max_sec: 4.0
+  opening_shot_sec: 1.6
+transition: {kind: cut, duration_sec: 0.0}
+captions: {style: white_soft_shadow, enabled: true}
+circle: {mode: "off"}   # кавычки обязательны: YAML 1.1 читает голый off как False
+title_card: {enabled: false}
+audio: {voice_lufs: -16.0, music_lufs: -26.0, limiter: 0.95, ducking: true}

@@ -1,0 +1,23 @@
+# Снят с IMG_5804 / IMG_5821 — музейный архивный док.
+# Замеры: сатурация +10% к сырью, субтитры на 65.6% высоты кеглем ~44px
+# (в пересчёте на 1080x1920), планы 2.4-3.4 с, титр держится 2.9 с.
+title: "Музей / архивный док"
+
+look: {profile: warm, saturation: 1.10, contrast: 1.05, gamma: 0.98}
+
+pacing: {shot_min_sec: 1.8, shot_target_sec: 2.8, shot_max_sec: 4.0, opening_shot_sec: 1.8}
+transition: {kind: dissolve, duration_sec: 0.18}
+
+captions:
+  style: white_soft_shadow
+  margin_v: 1260      # alignment=8, считается СВЕРХУ
+  size: 44
+  max_words_per_chunk: 4
+
+title_card:
+  enabled: true
+  duration_sec: 2.9
+  line1: {font: "Bebas Neue Cyrillic", size: 118, color: "#FFFFFF", y: 225}
+  line2: {font: "Lobster", size: 96, color: "#F0DC9C", italic: true, y: 323}
+
+audio: {music_lufs: -26.0, ducking: true}

@@ -1,0 +1,28 @@
+# То же, но ведущая едет кружком в углу поверх b-roll.
+# Кружок включается только там, где лицо реально крупное (см. face.circleable).
+title: "Музей + кружок в углу"
+
+look: {profile: warm, saturation: 1.10, contrast: 1.05, gamma: 0.98}
+pacing: {shot_min_sec: 1.8, shot_target_sec: 2.8, shot_max_sec: 4.0, opening_shot_sec: 1.8}
+transition: {kind: dissolve, duration_sec: 0.18}
+
+circle:
+  mode: pip
+  diameter: 0.34          # доля ширины кадра -> 367px на 1080
+  center: [0.74, 0.50]    # выше полосы субтитров — проверяется валидатором стиля
+  zoom: 2.2               # сторона квадрата = 2.2 ширины лица: голова + плечи
+  ring: {width_px: 6, color: "#FFFFFF", opacity: 1.0}
+  shadow: {blur_px: 24, opacity: 0.45, dy_px: 8}
+  when: speaking
+
+captions:
+  style: white_soft_shadow
+  margin_v: 1275      # замер референса: базовая линия на 66.4% высоты
+  size: 72            # замер референса: cap-height 40px на 1080 (не 31px, как выходило на 54).
+                      # Ширину строки ровно не повторить: там более широкий гротеск, Onest уже
+  outline: 2          # на белом чертеже обводка 1 пропадает
+  shadow: 3
+  max_words_per_chunk: 4
+  forbid_two_content_words: false
+
+audio: {music_lufs: -26.0, ducking: true}

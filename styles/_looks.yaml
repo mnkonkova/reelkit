@@ -1,0 +1,33 @@
+look_profiles:
+  neutral:
+    brightness: 0.0
+    contrast: 1.0
+    saturation: 1.0
+    gamma: 1.0
+    sharpness: 0.0
+  warm:
+    brightness: -0.015
+    contrast: 1.05
+    saturation: 1.08
+    gamma: 0.98
+    sharpness: 0.35
+  punchy:
+    brightness: 0.005
+    contrast: 1.06
+    saturation: 1.08
+    gamma: 1.01
+    sharpness: 0.35
+  punchy_bright:
+    brightness: 0.07
+    contrast: 1.04
+    saturation: 1.08
+    gamma: 1.05
+    sharpness: 0.35
+    # Optional film/brand look: add a .cube 3D LUT applied after the eq grade.
+    # lut_file: "assets/luts/teal_orange.cube"
+# B-roll transitions between clips. Disabled by default (hard cuts).
+# Enable to get crossfades/wipes/slides; the timeline length is preserved
+# (each outgoing clip is extended by duration_sec so it stays in voiceover sync).
+# kind: cut | fade/dissolve | dipblack | dipwhite |
+#       wipeleft | wiperight | wipeup | wipedown |
+#       slideleft | slideright | slideup | slidedown
